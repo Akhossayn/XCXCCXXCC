@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha-Omega Convergence Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Pro-Grade Dark Theme
+              'bg-dark': '#09090b',     // Zinc 950 - Deepest void
+              'bg-card': '#18181b',     // Zinc 900 - Card background
+              'bg-hover': '#27272a',    // Zinc 800 - Hover state
+              
+              // Semantic Colors
+              'primary': '#3b82f6',     // Blue 500 - Primary Actions
+              'alpha': '#10b981',       // Emerald 500 - Positive/Long/Alpha
+              'omega': '#f59e0b',       // Amber 500 - Warning/Short/Omega
+              'danger': '#ef4444',      // Red 500 - Critical
+              'convergence': '#8b5cf6', // Violet 500 - Convergence
+              
+              // Tiers
+              'tier1': '#3b82f6',       // Blue - High Conviction
+              'tier2': '#0ea5e9',       // Sky - Mid Conviction
+              'tier3': '#64748b',       // Slate - Low Conviction
+
+              // Text
+              'text-primary': '#f8fafc',
+              'text-secondary': '#94a3b8',
+              'text-muted': '#475569',
+            },
+            fontFamily: {
+              sans: ['Inter', 'Segoe UI', 'sans-serif'],
+              mono: ['JetBrains Mono', 'Menlo', 'Consolas', 'monospace'],
+            },
+            boxShadow: {
+              'glow-alpha': '0 0 15px rgba(16, 185, 129, 0.2)',
+              'glow-omega': '0 0 15px rgba(245, 158, 11, 0.2)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #09090b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46; 
+      }
+      
+      .chart-grid {
+        stroke: #27272a;
+        stroke-dasharray: 4 4;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-bg-dark text-text-primary font-sans antialiased selection:bg-primary selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
